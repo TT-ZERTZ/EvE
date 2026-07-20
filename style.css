@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    touch-action: none; /* Prevents default mobile panning/zooming while playing */
+}
+
+h1 {
+    margin-bottom: 5px;
+    letter-spacing: 5px;
+    font-size: 24px;
+}
+
+#gameContainer {
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 800px;
+    padding: 0 10px;
+}
+
+canvas {
+    background-color: #fafafa;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    border-radius: 4px;
+}
+
+/* Touch Controls Layout */
+.touch-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+}
+
+.touch-btn {
+    width: 65px;
+    height: 65px;
+    background-color: #222;
+    border: 2px solid #444;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+/* Visual feedback for touch/clicks */
+.touch-btn:active {
+    background-color: #444;
+    border-color: #666;
+    transform: scale(0.95);
+}
+
+.instructions {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #888;
+    text-align: center;
+    line-height: 1.4;
+}
